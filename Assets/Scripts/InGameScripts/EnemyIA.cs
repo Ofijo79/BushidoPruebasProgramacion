@@ -173,6 +173,8 @@ public class EnemyIA : MonoBehaviour
     void Attacking()
     {
         //_combo.StartCombo();
+        _animator.SetBool("TenguStop", false);
+        _animator.SetBool("TenguPatrolling", false);
         _animator.SetBool("AttackTengu", true);
         currentState = State.Chasing;
     }
