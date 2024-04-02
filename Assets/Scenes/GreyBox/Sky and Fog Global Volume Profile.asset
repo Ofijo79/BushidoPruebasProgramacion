@@ -145,10 +145,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   upperHemisphereLuxValue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 8.056292
   upperHemisphereLuxColor:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0.4459252, y: 0.4574245, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   hdriSky:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {fileID: 8900000, guid: 86929296cefb9e2408e463caded81b64, type: 3}
   distortionMode:
     m_OverrideState: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9e4ed5a6f56fb4ebd693e39684f36f, type: 3}
   m_Name: VolumetricClouds
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enable:
     m_OverrideState: 1
     m_Value: 1
