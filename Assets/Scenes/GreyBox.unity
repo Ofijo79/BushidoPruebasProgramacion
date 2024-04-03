@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 8868.157, g: 4854.313, b: 2337.2034, a: 1}
+  m_IndirectSpecularColor: {r: 8864.017, g: 4846.43, b: 2318.301, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18964,52 +18964,16 @@ Transform:
   - {fileID: 133633752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1502411196
+--- !u!1 &1502411196 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8296008963119521609, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+  m_PrefabInstance: {fileID: 4188127414906421219}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1502411197}
-  - component: {fileID: 1502411198}
-  m_Layer: 0
-  m_Name: DamageDealer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1502411197
+--- !u!4 &1502411197 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+  m_PrefabInstance: {fileID: 4188127414906421219}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502411196}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7071054, y: 0.000004072672, z: -0.0000019446006, w: 0.70710814}
-  m_LocalPosition: {x: 0, y: -0, z: 0.01239}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 935165675}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1502411198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502411196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826c876a434854445ba1f1e9d9bf82b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponLength: 1.25
-  weaponDamage: 10
 --- !u!1 &1505076528
 GameObject:
   m_ObjectHideFlags: 0
@@ -26826,6 +26790,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1890910595786045333, guid: b3f0f1b55ceccd44792e0af26773100f, type: 3}
+--- !u!1001 &4188127414906421219
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 935165675}
+    m_Modifications:
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01239
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710814
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071054
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000004072672
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000019446006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522067422857590597, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296008963119521609, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
+      propertyPath: m_Name
+      value: DamageDealer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab9c4a8345c35cd4d922d0f50c95ac69, type: 3}
 --- !u!1001 &5535274356413038322
 PrefabInstance:
   m_ObjectHideFlags: 0
