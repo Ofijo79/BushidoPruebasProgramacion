@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EquipmentSystem : MonoBehaviour
 {
-    [SerializeField]GameObject weapon;
+    /*[SerializeField]GameObject weapon;
     [SerializeField]GameObject dealer;
     // Start is called before the first frame update
     void Start()
@@ -26,5 +26,5 @@ public class EquipmentSystem : MonoBehaviour
     public void EndDealDamage()
     {
         dealer.GetComponentInChildren<DamageDealer>().EndDealDamage();
-    }
+    }*/
 }

@@ -5,10 +5,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]float Health = 50;
+    float damageAmount = 10;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,7 +19,15 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void TakeDamage(float damageAmount)
+    void OnCollisionEnter(Collision other) 
+    {
+        if(other.gameObject.CompareTag("Katana"))
+        {
+            TakeDamage();
+        }    
+    }
+
+    public void TakeDamage()
     {
         Health -= damageAmount;
 

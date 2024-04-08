@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    bool canDealDamage;
+    /*bool canDealDamage;
     List<GameObject> hasDealtDamage;
 
     [SerializeField] float weaponLength;
@@ -55,5 +55,5 @@ public class DamageDealer : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position - transform.up * weaponLength);
-    }
+    }*/
 }
