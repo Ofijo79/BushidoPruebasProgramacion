@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.CompareTag("Katana"))
         {
             TakeDamage();
-        }    
+        }
     }
 
     public void TakeDamage()
