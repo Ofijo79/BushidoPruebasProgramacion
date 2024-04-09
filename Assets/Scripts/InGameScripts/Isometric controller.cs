@@ -149,7 +149,7 @@ public class Isometriccontroller : MonoBehaviour
             canClick = true;
             buttonQuantity = 0;            
         }
-        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && buttonQuantity >= 2 && _resistance.actualResistance > 0)
+        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && buttonQuantity >= 2)
         {
             _animator.SetInteger("attack", 2);
             canClick = true;
@@ -161,7 +161,7 @@ public class Isometriccontroller : MonoBehaviour
             canClick = true;
             buttonQuantity = 0;
         }
-        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && buttonQuantity >= 3 && _resistance.actualResistance > 0)
+        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && buttonQuantity >= 3)
         {
             _animator.SetInteger("attack", 3);
             canClick = true;
@@ -173,7 +173,7 @@ public class Isometriccontroller : MonoBehaviour
             canClick = true;
             buttonQuantity = 0;
         }  
-        else if(_resistance.actualResistance <= 0)
+        else if(_resistance.actualResistance == 0)
         {
             _animator.SetInteger("attack", 0);
             canClick = true;
