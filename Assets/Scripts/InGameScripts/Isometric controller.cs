@@ -132,7 +132,7 @@ public class Isometriccontroller : MonoBehaviour
             buttonQuantity++;
         }
 
-        if(buttonQuantity == 1)
+        if(buttonQuantity == 1 && _resistance.actualResistance > 0)
         {
             _animator.SetInteger("attack", 1);
             _resistance.takeResistance();
@@ -149,7 +149,7 @@ public class Isometriccontroller : MonoBehaviour
             canClick = true;
             buttonQuantity = 0;            
         }
-        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && buttonQuantity >= 2 && _resistance.actualResistance > 0f)
+        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && buttonQuantity >= 2 && _resistance.actualResistance > 0)
         {
             _animator.SetInteger("attack", 2);
             canClick = true;
@@ -161,24 +161,24 @@ public class Isometriccontroller : MonoBehaviour
             canClick = true;
             buttonQuantity = 0;
         }
-        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && buttonQuantity >= 3 && _resistance.actualResistance > 0f)
+        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && buttonQuantity >= 3 && _resistance.actualResistance > 0)
         {
             _animator.SetInteger("attack", 3);
             canClick = true;
             _resistance.takeResistance();
         }
-        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack3") && buttonQuantity == 3)
+        else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))
         {
             _animator.SetInteger("attack", 0);
             canClick = true;
             buttonQuantity = 0;
-        }
-        else if(_resistance.actualResistance == 0f)
+        }  
+        else if(_resistance.actualResistance <= 0)
         {
             _animator.SetInteger("attack", 0);
             canClick = true;
             buttonQuantity = 0;
-        }
+        } 
     }
 
 

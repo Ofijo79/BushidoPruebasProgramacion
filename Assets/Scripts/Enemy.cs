@@ -19,26 +19,30 @@ public class Enemy : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision other) 
-    {
-        if(other.gameObject.CompareTag("Katana"))
+    void OnTriggerEnter(Collider other) 
+    { 
+        if(other.gameObject.tag == "Katana")
         {
+            Debug.Log("Tocado");       
             TakeDamage();
         }
     }
 
     public void TakeDamage()
     {
+        Debug.Log("Me quitan vida");
         Health -= damageAmount;
 
         if(Health <= 0)
         {
+            Debug.Log("Estoy Muerto");
             Die();
         }
     }
 
     void Die()
     {
+        Debug.Log("Eliminando objeto");
         Destroy(this.gameObject);
     }
 }
