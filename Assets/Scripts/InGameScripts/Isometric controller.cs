@@ -82,7 +82,7 @@ public class Isometriccontroller : MonoBehaviour
 
         Jump();
 
-        if(Input.GetKeyDown("e"))
+        if(Input.GetKeyDown("e") && _resistance.actualResistance > 0)
         {
             Combo();
         }
