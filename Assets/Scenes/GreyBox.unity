@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 8860.985, g: 4844.6567, b: 2317.465, a: 1}
+  m_IndirectSpecularColor: {r: 8618.056, g: 4598.485, b: 2056.2502, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4437,8 +4437,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.13
-  m_Height: 6.06
+  m_Radius: 1.53
+  m_Height: 6.16
   m_Direction: 1
   m_Center: {x: 0, y: 2.9, z: -0.21}
 --- !u!114 &337773319
@@ -4448,30 +4448,41 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337773313}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39d50a00c6a74a24eb4f2dc22f57a091, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e4aaac5093c3f54e88d9bad2806e2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 5
-  timeBetweenAttacks: 1.5
-  numberOfAttacks: 3
-  player: {fileID: 965920652}
-  _animator: {fileID: 337773315}
---- !u!114 &337773320
-MonoBehaviour:
+  maxHealth: 50
+  Health: 50
+  healthSlider: {fileID: 463788500}
+--- !u!54 &337773320
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337773313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 513255f709273014ca8621e940e2194e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthSlider: {fileID: 463788500}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 36
+  m_CollisionDetection: 0
 --- !u!1001 &338372200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21647,11 +21658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4364030134435010372, guid: f79c83d5881b9584387d0ba5bf0ad4e2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4364030134435010372, guid: f79c83d5881b9584387d0ba5bf0ad4e2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.000000004927111
       objectReference: {fileID: 0}
     - target: {fileID: 4364030134435010372, guid: f79c83d5881b9584387d0ba5bf0ad4e2, type: 3}
       propertyPath: m_LocalRotation.y
@@ -21659,7 +21670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4364030134435010372, guid: f79c83d5881b9584387d0ba5bf0ad4e2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.000000004927111
       objectReference: {fileID: 0}
     - target: {fileID: 4364030134435010372, guid: f79c83d5881b9584387d0ba5bf0ad4e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22412,11 +22423,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2352272465676470988, guid: b3f0f1b55ceccd44792e0af26773100f, type: 3}
---- !u!1 &965920652 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6385620451596043486, guid: 3f77e011bd756204ab5e7b8ecde8aeb7, type: 3}
-  m_PrefabInstance: {fileID: 5535274356413038322}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &966454947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27629,7 +27635,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4aaac5093c3f54e88d9bad2806e2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 50
   Health: 50
+  healthSlider: {fileID: 0}
 --- !u!136 &1494375366
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27892,7 +27900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502040169}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: -0.000000004927111, y: -0.7071068, z: -0.000000004927111, w: 0.7071068}
   m_LocalPosition: {x: 1.6710007, y: 1.595967, z: -4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35310,10 +35318,10 @@ PrefabInstance:
       addedObject: {fileID: 337773315}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83d57b1eecfc91b48a53c8a63978b20c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 337773319}
+      addedObject: {fileID: 337773320}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83d57b1eecfc91b48a53c8a63978b20c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 337773320}
+      addedObject: {fileID: 337773319}
   m_SourcePrefab: {fileID: 100100000, guid: 83d57b1eecfc91b48a53c8a63978b20c, type: 3}
 --- !u!1001 &1808590491
 PrefabInstance:
