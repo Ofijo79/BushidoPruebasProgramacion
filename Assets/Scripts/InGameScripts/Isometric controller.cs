@@ -80,6 +80,11 @@ public class Isometriccontroller : MonoBehaviour
         
         Movement();
 
+        if(Input.GetKey(KeyCode.LeftShift) && _resistance.actualResistance > 0)
+        {
+            Sprint();
+        }
+
         Jump();
 
         if(Input.GetKeyDown("e") && _resistance.actualResistance > 0)
@@ -255,7 +260,33 @@ public class Isometriccontroller : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, yAxis.Value, 0);
             _lookAtTransform.eulerAngles = new Vector3(yAxis.Value, transform.eulerAngles.y, 0);
             _resistance.MovementRes();
+            _playerSpeed = 4;
         //}        
+    }
+    void Sprint()
+    {
+        direction = new Vector3(_horizontal, 0, _vertical);
+        
+            _animator.SetFloat("VelX", 0);
+            _animator.SetFloat("VelZ", direction.magnitude);
+            
+            if(direction != Vector3.zero)
+            {
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg +  _camera.eulerAngles.y;
+
+                Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+                _controller.Move(moveDirection.normalized * _playerSpeed * Time.deltaTime);
+            }
+            
+            Vector3 move = new Vector3(0, _vertical, _horizontal).normalized;
+
+            xAxis.Update(Time.deltaTime);
+            yAxis.Update(Time.deltaTime);
+
+            transform.rotation = Quaternion.Euler(0, yAxis.Value, 0);
+            _lookAtTransform.eulerAngles = new Vector3(yAxis.Value, transform.eulerAngles.y, 0);
+            _resistance.MovementRes();
+            _playerSpeed = 7;
     }
 
     void Jump()

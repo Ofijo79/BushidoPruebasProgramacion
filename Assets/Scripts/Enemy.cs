@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public int maxHealth = 50;
     [SerializeField]float Health = 50;
     float damageAmount = 10;
 
+    public Slider healthSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,27 +25,28 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter(Collider other) 
     { 
         if(other.gameObject.tag == "Katana")
-        {
-            Debug.Log("Tocado");       
+        {     
             TakeDamage();
         }
     }
 
     public void TakeDamage()
     {
-        Debug.Log("Me quitan vida");
         Health -= damageAmount;
-
+        ActualizeHealth();
         if(Health <= 0)
         {
-            Debug.Log("Estoy Muerto");
             Die();
         }
     }
 
     void Die()
     {
-        Debug.Log("Eliminando objeto");
         Destroy(this.gameObject);
+    }
+
+    void ActualizeHealth()
+    {
+        healthSlider.value = Health / maxHealth;
     }
 }
