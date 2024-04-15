@@ -9,7 +9,9 @@ public class ResistencePlayer : MonoBehaviour
     public float resistenceInitial = 100f;
     public float velocityRunning = 1f;
     public float resistenceXHit = 10f;
-    public Slider sliderResistence; 
+    public Slider sliderResistence;
+
+     public float resistenceXDash = 25f;
 
     public float actualResistance;
 
@@ -36,6 +38,14 @@ public class ResistencePlayer : MonoBehaviour
     public void takeResistance()
     {
         actualResistance -= resistenceXHit;
+        actualResistance = Mathf.Max(0, actualResistance);
+        ActualizeResistance();
+        ResetTime();
+    }
+    
+    public void dashResistance()
+    {
+        actualResistance -= resistenceXDash;
         actualResistance = Mathf.Max(0, actualResistance);
         ActualizeResistance();
         ResetTime();

@@ -45,7 +45,7 @@ public class EnemyIA : MonoBehaviour
 
     Animator _animator;
 
-    //EnemyCombo _combo;
+    
 
     // Start is called before the first frame update
     void Awake()
@@ -172,10 +172,7 @@ public class EnemyIA : MonoBehaviour
     }
     void Attacking()
     {
-        //_combo.StartCombo();
-        _animator.SetBool("TenguStop", false);
-        _animator.SetBool("TenguPatrolling", false);
-        _animator.SetBool("AttackTengu", true);
+        _animator.SetInteger("enemyAttack", 1);
         currentState = State.Chasing;
     }
 
@@ -278,7 +275,7 @@ public class EnemyIA : MonoBehaviour
 
         Vector3 fovLine1 = Quaternion.AngleAxis(visionAngle * 0.5f, transform.up) * transform.forward * visionRange;
 
-        Vector3 fovLine2 = Quaternion.AngleAxis(-visionAngle * 0.5f, transform.up) * transform.forward * visionRange;
+        Vector3 fovLine2 = Quaternion.AngleAxis(-visionAngle * 0.2f, transform.up) * transform.forward * visionRange;
 
         Gizmos.DrawLine(transform.position, transform.position + fovLine1);
 

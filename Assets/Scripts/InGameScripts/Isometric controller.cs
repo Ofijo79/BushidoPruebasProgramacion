@@ -49,8 +49,7 @@ public class Isometriccontroller : MonoBehaviour
     public float dashDistance = 5f;
     public float dashDuration = 0.5f;
     public float dashCooldown = 2f;
-    private bool isDashing = false;
-    bool isInvulnerable = false;
+    public bool isDashing = false;
 
     //Resistencia
     private ResistencePlayer _resistance;
@@ -80,14 +79,14 @@ public class Isometriccontroller : MonoBehaviour
         
         Movement();
 
-        if(Input.GetKey(KeyCode.LeftShift) && _resistance.actualResistance > 0)
+        if(Input.GetKey(KeyCode.LeftShift) && _resistance.actualResistance > 1)
         {
             Sprint();
         }
 
         Jump();
 
-        if(Input.GetKeyDown("e") && _resistance.actualResistance > 0)
+        if(Input.GetKeyDown("e") && _resistance.actualResistance > 10)
         {
             Combo();
         }
@@ -113,9 +112,10 @@ public class Isometriccontroller : MonoBehaviour
             DontBlock();
         }
 
-        if (!isDashing && Input.GetKeyDown("z"))
+        if (!isDashing && Input.GetKeyDown("z") && _resistance.actualResistance > 29)
         {
             StartCoroutine(PerformDash());
+            _resistance.dashResistance();
         }
     }
 
@@ -317,7 +317,6 @@ public class Isometriccontroller : MonoBehaviour
     IEnumerator PerformDash()
     {
         isDashing = true;
-        isInvulnerable = true;
 
         // Guardar la posición inicial para el dash
         Vector3 startPosition = transform.position;
@@ -350,6 +349,5 @@ public class Isometriccontroller : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
 
         isDashing = false;
-        isInvulnerable = false;
     }
 }

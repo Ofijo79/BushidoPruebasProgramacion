@@ -5,35 +5,44 @@ using UnityEngine.UI;
 
 public class HealthPlayer : MonoBehaviour
 {
-
-    public Slider sliderHealth;
     public int maxHealth = 100;
-    private int currentHealth;
+    [SerializeField]float health = 100;
+    float damageAmount = 10;
+
+    public Slider healthSlider;
+
+    Isometriccontroller dash;
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        dash = GetComponent<Isometriccontroller>();
     }
 
-    void OnTriggerEnter(Collider Coll)
-    {
-        if(Coll.CompareTag("Arma"))
-        {
-            TakeDamage(10);
+    void OnTriggerEnter(Collider other) 
+    { 
+        if(other.gameObject.tag == "Arma" && dash.isDashing == false)
+        {     
+            GetDamage();
         }
     }
 
-    public void TakeDamage(int damage)
+    public void GetDamage()
     {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
+        health -= damageAmount;
+        ActualHealth();
+        if(health <= 0)
         {
             Die();
         }
     }
 
-    private void Die()
+    void Die()
     {
-        Debug.Log("El jugador ha muerto.");
+        Destroy(this.gameObject);
+    }
+    
+    void ActualHealth()
+    {
+        healthSlider.value = health / maxHealth;
     }
 }

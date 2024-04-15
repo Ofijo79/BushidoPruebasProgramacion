@@ -10,10 +10,11 @@ public class Enemy : MonoBehaviour
     float damageAmount = 10;
 
     public Slider healthSlider;
+    GameObject jugador;
     // Start is called before the first frame update
     void Start()
     {
-
+        jugador = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -27,7 +28,17 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Katana")
         {     
             TakeDamage();
+            EmpujarHaciaAtras();
         }
+    }
+
+    void EmpujarHaciaAtras()
+    {
+        Vector3 direccionGolpe = transform.position - jugador.transform.position;
+        direccionGolpe.Normalize();
+
+        float fuerzaEmpuje = 20f;
+        transform.position += direccionGolpe * fuerzaEmpuje * Time.deltaTime;
     }
 
     public void TakeDamage()
