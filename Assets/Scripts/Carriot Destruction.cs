@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class BoxDestruction : MonoBehaviour
+public class CarriotDestruction : MonoBehaviour
 {
     private Rigidbody rbody;
-    [SerializeField] private GameObject brokenBox;
+    [SerializeField] private GameObject brokenCarriot;
     [SerializeField] private float explosiveForce = 100f;
     [SerializeField] private float explosiveRadius = 2f;
     [SerializeField] private float pieceFadeSpeed = 0.25f;
@@ -18,24 +18,34 @@ public class BoxDestruction : MonoBehaviour
         rbody = GetComponent<Rigidbody>();
     }
 
-    public void Explode()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Katana")) // Assuming the tag of the katana is "Katana"
+        {
+            StartCoroutine(ExplodeCoroutine());
+        }
+    }
+
+    private IEnumerator ExplodeCoroutine()
     {
         if (rbody != null)
         {
             Destroy(rbody);
         }
 
-        if (TryGetComponent<Collider>(out Collider collider))
+        Collider collider = GetComponent<Collider>();
+        if (collider != null)
         {
             collider.enabled = false;
         }
 
-        if (TryGetComponent<Renderer>(out Renderer render))
+        Renderer render = GetComponent<Renderer>();
+        if (render != null)
         {
             render.enabled = false;
         }
 
-        GameObject brokenInstance = Instantiate(brokenBox, transform.position, transform.rotation);
+        GameObject brokenInstance = Instantiate(brokenCarriot, transform.position, transform.rotation);
         Rigidbody[] pieces = brokenInstance.GetComponentsInChildren<Rigidbody>();
 
         foreach (Rigidbody body in pieces)
@@ -48,7 +58,7 @@ public class BoxDestruction : MonoBehaviour
             body.AddExplosionForce(explosiveForce, transform.position, explosiveRadius);
         }
 
-        StartCoroutine(FadeOutRigidBodies(pieces));
+        yield return FadeOutRigidBodies(pieces);
     }
 
     private IEnumerator FadeOutRigidBodies(Rigidbody[] pieces)
