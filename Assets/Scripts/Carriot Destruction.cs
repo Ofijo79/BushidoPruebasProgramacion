@@ -85,7 +85,7 @@ public class CarriotDestruction : MonoBehaviour
             foreach (Rigidbody body in pieces)
             {
                 Destroy(body.GetComponent<Collider>());
-                Destroy(body.gameObject);
+                Destroy(gameObject);
             }
 
             float time = 0f;
