@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 8860.204, g: 4843.5083, b: 2316.9065, a: 1}
+  m_IndirectSpecularColor: {r: 8862.673, g: 4845.477, b: 2317.965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1456,6 +1456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 709110aa18f3e3a4c83b618d641abb58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0baa8f595f6507f49966d6fea61c38de, type: 2}
     - target: {fileID: 919132149155446097, guid: 709110aa18f3e3a4c83b618d641abb58, type: 3}
       propertyPath: m_Name
       value: Barril (3)
@@ -2359,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -3231,7 +3235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -7771,7 +7775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -21275,7 +21279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -22150,7 +22154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37720bffc266edf4f83a123975c57fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBarrel: {fileID: 8035869401655414201, guid: 89ca4f1163123fb4bac01f69c760cdc6, type: 3}
+  brokenBarrel: {fileID: 6684959867990905756, guid: e0c4d6069be5efb40b01481a5b462ea6, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -26175,7 +26179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -35850,7 +35854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -38624,7 +38628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -38858,7 +38862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
@@ -39051,7 +39055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ed1a5e2f03c404e8efac9713bd1db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenBox: {fileID: 8659941736280148369, guid: 19477466a71ead443af106ef525fa895, type: 3}
+  brokenBox: {fileID: 6979112234556773069, guid: 6cbd3208d6cdf2a48b1bc6301acabfcc, type: 3}
   explosiveForce: 100
   explosiveRadius: 2
   pieceFadeSpeed: 0.25
