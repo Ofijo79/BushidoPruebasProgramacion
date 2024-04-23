@@ -47,13 +47,11 @@ public class EnemyIA : MonoBehaviour
 
     
 
-    // Start is called before the first frame update
+
     void Awake()
     {
         enemyAgent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
-        //playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         _animator = GetComponent<Animator>();
-        //_combo = GetComponent<EnemyCombo>();
     }
 
     void Start()
@@ -172,35 +170,41 @@ public class EnemyIA : MonoBehaviour
     }
     void Attacking()
     {
+        _animator.SetBool("TenguStop", false);
+        _animator.SetBool("TenguPatrolling", false);
         _animator.SetInteger("enemyAttack", 1);
+
         currentState = State.Chasing;
     }
 
     bool OnRangeAttack()
     {
+        if(Vector3.Distance(transform.position, playerTransform.position) <= visionRange)
+        {
+            return true;
+        }
+
+        return false;
+
         Vector3 directionToPlayer = playerTransform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
 
         if(distanceToPlayer <= visionRange && angleToPlayer < visionAngle * 0.2f)
         {
-            //return true;
+            return true;
 
             if(playerTransform.position == lastTargetPosition)
             {
-                /*lastTargetPosition = playerTransform.position;
-                currentState = State.Attacking;*/
+                lastTargetPosition = playerTransform.position;
                 return true;
             }
 
             RaycastHit hit;
-            if(Physics.Raycast(transform.position, directionToPlayer, out hit, attackRange))
+            if(Physics.Raycast(transform.position, directionToPlayer, out hit, distanceToPlayer))
             {
-                Debug.DrawRay(transform.position, directionToPlayer * attackRange, Color.green);
-
                 if(hit.collider.CompareTag("Player"))
                 {
-                    lastTargetPosition = playerTransform.position;
                     return true;
                 } 
             }
@@ -209,7 +213,6 @@ public class EnemyIA : MonoBehaviour
         }
 
         return false;
-
     }
 
     void GotoNextPoint()

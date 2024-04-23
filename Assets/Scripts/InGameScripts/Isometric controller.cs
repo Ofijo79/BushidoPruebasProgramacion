@@ -86,7 +86,7 @@ public class Isometriccontroller : MonoBehaviour
 
         Jump();
 
-        if(Input.GetKeyDown("e") && _resistance.actualResistance > 10)
+        if(Input.GetKeyDown("e") && _resistance.actualResistance > 9)
         {
             Combo();
         }
@@ -112,7 +112,7 @@ public class Isometriccontroller : MonoBehaviour
             DontBlock();
         }
 
-        if (!isDashing && Input.GetKeyDown("z") && _resistance.actualResistance > 29)
+        if (!isDashing && Input.GetKeyDown("z") && _resistance.actualResistance > 20)
         {
             StartCoroutine(PerformDash());
             _resistance.dashResistance();
@@ -298,10 +298,11 @@ public class Isometriccontroller : MonoBehaviour
         {
             _playerGravity.y = -2;
         }
-        if(_isGrounded && Input.GetButtonDown("Jump"))
+        if(_isGrounded && Input.GetButtonDown("Jump") && _resistance.actualResistance > 20)
         {
             _playerGravity.y = Mathf.Sqrt(_jumpHeigh * -2 * _gravity);
             //_animator.SetBool("IsJumping", true);
+            _resistance.jumpResistance();
         }        
         _playerGravity.y += _gravity * Time.deltaTime;
         
