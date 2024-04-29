@@ -194,8 +194,8 @@ public class Isometriccontroller : MonoBehaviour
     
     void Block()
     {
-         _animator.SetBool("IsBlocking", true);
-         _animator.SetBool("WalkingBlock", false);
+        _animator.SetBool("IsBlocking", true);
+        _animator.SetBool("WalkingBlock", false);
 
         _playerSpeed = 2;
     }

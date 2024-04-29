@@ -41,7 +41,7 @@ public class EnemyIA : MonoBehaviour
 
     private bool repeat = true;
 
-    [SerializeField] float attackRange = 5;
+    [SerializeField] float attackRange = 1;
 
     Animator _animator;
 
@@ -108,6 +108,7 @@ public class EnemyIA : MonoBehaviour
     {
         _animator.SetBool("TenguStop", false);
         _animator.SetBool("TenguPatrolling", true);
+        _animator.SetInteger("enemyAttack", 0);
         enemyAgent.destination = playerTransform.position;
 
         if(OnRange() == false)
@@ -168,18 +169,103 @@ public class EnemyIA : MonoBehaviour
         currentState = State.Patrolling;  
         repeat = true;
     }
+    
     void Attacking()
     {
+        DetenerMovimiento();
         _animator.SetBool("TenguStop", false);
         _animator.SetBool("TenguPatrolling", false);
         _animator.SetInteger("enemyAttack", 1);
 
-        currentState = State.Chasing;
+        StartCoroutine(WaitForAttackAnimation());
+    }
+
+    void DetenerMovimiento()
+    {
+        // Detener el movimiento del enemigo
+        enemyAgent.isStopped = true;
+    }
+
+    void ReanudarMovimiento()
+    {
+        // Reanudar el movimiento del enemigo
+        enemyAgent.isStopped = false;
+    }
+
+    IEnumerator WaitForAttackAnimation()
+    {
+        // Esperar hasta que la animación de ataque termine
+        yield return new WaitForSeconds(_animator.GetCurrentAnimatorClipInfo(0).Length);
+        ReanudarMovimiento();
+
+        // Verificar si el enemigo sigue dentro del rango de ataque después de la animación
+        if (OnRangeAttack())
+        {
+            SecondAttack();
+        }
+        else
+        {
+            currentState = State.Chasing;
+        }
+    }
+
+    void SecondAttack()
+    {
+        DetenerMovimiento();
+        _animator.SetBool("TenguStop", false);
+        _animator.SetBool("TenguPatrolling", false);
+        _animator.SetInteger("enemyAttack", 2);
+
+        StartCoroutine(WaitForSecondAttackAnimation());
+    }
+
+    IEnumerator WaitForSecondAttackAnimation()
+    {
+        // Esperar hasta que la animación de ataque termine
+        yield return new WaitForSeconds(_animator.GetCurrentAnimatorClipInfo(0).Length);
+        ReanudarMovimiento();
+
+        // Verificar si el enemigo sigue dentro del rango de ataque después de la animación
+        if (OnRangeAttack())
+        {
+            ThirdAttack();
+        }
+        else
+        {
+            currentState = State.Chasing;
+        }
+    }
+
+    void ThirdAttack()
+    {
+        DetenerMovimiento();
+        _animator.SetBool("TenguStop", false);
+        _animator.SetBool("TenguPatrolling", false);
+        _animator.SetInteger("enemyAttack", 3);
+
+        StartCoroutine(WaitForThirdAttackAnimation());
+    }
+    
+    IEnumerator WaitForThirdAttackAnimation()
+    {
+        // Esperar hasta que la animación de ataque termine
+        yield return new WaitForSeconds(_animator.GetCurrentAnimatorClipInfo(0).Length);
+        ReanudarMovimiento();
+
+        // Verificar si el enemigo sigue dentro del rango de ataque después de la animación
+        if (OnRangeAttack())
+        {
+            Attacking();
+        }
+        else
+        {
+            currentState = State.Chasing;
+        }
     }
 
     bool OnRangeAttack()
     {
-        if(Vector3.Distance(transform.position, playerTransform.position) <= visionRange)
+        if(Vector3.Distance(transform.position, playerTransform.position) <= attackRange)
         {
             return true;
         }
@@ -190,7 +276,7 @@ public class EnemyIA : MonoBehaviour
         float distanceToPlayer = directionToPlayer.magnitude;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
 
-        if(distanceToPlayer <= visionRange && angleToPlayer < visionAngle * 0.2f)
+        if(distanceToPlayer <= attackRange && angleToPlayer < visionAngle * 1f)
         {
             return true;
 
@@ -273,6 +359,9 @@ public class EnemyIA : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, visionRange);
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
 
         Gizmos.color = Color.green;
 
