@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         Vector3 direccionGolpe = transform.position - jugador.transform.position;
         direccionGolpe.Normalize();
 
-        float fuerzaEmpuje = 20f;
+        float fuerzaEmpuje = 50f;
         transform.position += direccionGolpe * fuerzaEmpuje * Time.deltaTime;
     }
 

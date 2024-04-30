@@ -12,10 +12,12 @@ public class EnemyLejos : MonoBehaviour
     public float cadencyShoot = 1f;
 
     private float shootTime = 0f;
+    Animator _animator;
 
     void Update()
     {
-
+        _animator = GetComponent<Animator>();
+        _animator.SetBool("Idle", true);
         Vector3 directionToPlayer = player.position - transform.position;
         float playerDistance = directionToPlayer.magnitude;
 
@@ -36,7 +38,8 @@ public class EnemyLejos : MonoBehaviour
 
     void Shoot()
     {
-
+        _animator.SetBool("Idle", false);
+        _animator.SetBool("Shooting", true);
         GameObject flecha = Instantiate(flechaPrefab, shootPoint.position, shootPoint.rotation);
 
         flecha.GetComponent<Rigidbody>().AddForce(shootPoint.forward * 10f, ForceMode.Impulse);

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyIA : MonoBehaviour
 {
-
     enum State
     {
         Patrolling,
