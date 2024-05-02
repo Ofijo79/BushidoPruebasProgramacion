@@ -32239,7 +32239,7 @@ MonoBehaviour:
   resistanceXJump: 25
   actualResistance: 0
   velocityRegeneration: 10
-  tiemeOfInactivity: 5
+  tiemeOfInactivity: 2
   baseVelocityRegeneration: 1
   enhancedVelocityRegeneration: 35
 --- !u!114 &1424428570
