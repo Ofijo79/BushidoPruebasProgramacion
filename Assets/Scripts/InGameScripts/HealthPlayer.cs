@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthPlayer : MonoBehaviour
 {
@@ -13,10 +14,13 @@ public class HealthPlayer : MonoBehaviour
     public Slider healthSlider;
 
     Isometriccontroller dash;
+
+    MenuManagement death;
     // Start is called before the first frame update
     void Start()
     {
         dash = GetComponent<Isometriccontroller>();
+        death = GameObject.Find("MenuManagement").GetComponent<MenuManagement>();
     }
 
     void OnTriggerEnter(Collider other) 
@@ -54,7 +58,12 @@ public class HealthPlayer : MonoBehaviour
 
     void Die()
     {
-        Destroy(this.gameObject);
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.enabled = false;
+        }
+        death.DeathScreen();
     }
     
     void ActualHealth()
