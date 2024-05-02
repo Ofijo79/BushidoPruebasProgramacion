@@ -17,7 +17,6 @@ public class EnemyLejos : MonoBehaviour
     void Update()
     {
         _animator = GetComponent<Animator>();
-        _animator.SetBool("Idle", true);
         Vector3 directionToPlayer = player.position - transform.position;
         float playerDistance = directionToPlayer.magnitude;
 
@@ -33,6 +32,10 @@ public class EnemyLejos : MonoBehaviour
                 Shoot();
                 shootTime = Time.time + 1f / cadencyShoot;
             }
+        }
+        else
+        {
+            _animator.SetBool("Idle", true);
         }
     }
 

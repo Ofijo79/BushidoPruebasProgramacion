@@ -17,11 +17,15 @@ public class ResistencePlayer : MonoBehaviour
 
     public float actualResistance;
 
-    public float velocityRegeneration = 10f;
+    public float velocityRegeneration = 30f;
 
     private float tiemeWithoutActivity;
 
-    public float tiemeOfInactivity = 5f;
+    public float tiemeOfInactivity = 2f;
+
+    public float baseVelocityRegeneration = 1.0f;
+    
+    public float enhancedVelocityRegeneration = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,7 +87,16 @@ public class ResistencePlayer : MonoBehaviour
             tiemeWithoutActivity += Time.deltaTime;
             if (tiemeWithoutActivity >= tiemeOfInactivity)
             {
-                actualResistance += velocityRegeneration * Time.deltaTime;
+                // Usa la velocidad base de regeneración como valor predeterminado
+                float regenerationVelocity = baseVelocityRegeneration;
+
+                // Si la resistencia está por debajo de su valor inicial, aumenta la velocidad de regeneración
+                if (actualResistance < resistenceInitial)
+                {
+                    regenerationVelocity = enhancedVelocityRegeneration;
+                }
+
+                actualResistance += regenerationVelocity * Time.deltaTime;
                 actualResistance = Mathf.Min(actualResistance, resistenceInitial);
                 ActualizeResistance();
             }
