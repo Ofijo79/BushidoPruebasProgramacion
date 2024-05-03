@@ -28,20 +28,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!244 &-8781851354826452520
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 00f5f8604671b844d8a6cd6e299110ea
-  m_EffectName: Attenuation
-  m_MixLevel: f3d29e777f790764e89170fd63c7f27f
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!243 &-6347873081805062566
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -83,14 +69,11 @@ AudioMixerController:
     name: MusicVolume
   - guid: 70e0c2ab873796a48ab430b0f87a60dd
     name: SFXVolume
-  - guid: 2f7bd182b4d31d04ca364ba58b65b043
-    name: VoiceVolume
   m_AudioMixerGroupViews:
   - guids:
     - 8c151b97e6bdd0e4b8f10018e7cc8f7a
     - f1ea669a807bb6e438a79f974bf2ceae
     - 53a56853ba9b84e42945c9fc23c67a20
-    - dbd087038e3be7f4f8c8df63d29fbb62
     name: Global
   - guids:
     - 8c151b97e6bdd0e4b8f10018e7cc8f7a
@@ -102,7 +85,6 @@ AudioMixerController:
     name: SFX
   - guids:
     - 8c151b97e6bdd0e4b8f10018e7cc8f7a
-    - dbd087038e3be7f4f8c8df63d29fbb62
     name: Voice
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -118,7 +100,6 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: -6347873081805062566}
   - {fileID: 286030569362704102}
-  - {fileID: 7220356971178619426}
   m_Volume: bff57f5e96f54f0439650fdf54830bd1
   m_Pitch: c1e2189b35658eb4b9d2ce1dc7d20e33
   m_Send: 00000000000000000000000000000000
@@ -169,25 +150,6 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: -9159628947896094745}
   m_UserColorIndex: 1
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
---- !u!243 &7220356971178619426
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Voice
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: dbd087038e3be7f4f8c8df63d29fbb62
-  m_Children: []
-  m_Volume: 2f7bd182b4d31d04ca364ba58b65b043
-  m_Pitch: d6dece863b20ef24aac1229ab0cc19a0
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -8781851354826452520}
-  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
