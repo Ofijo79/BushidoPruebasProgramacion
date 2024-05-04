@@ -17,8 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
         transform.position += transform.forward * bulletSpeed * Time.deltaTime;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
