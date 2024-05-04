@@ -6,58 +6,71 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 50;
-    [SerializeField]float Health = 50;
+    [SerializeField] float health = 50;
     float damageAmount = 10;
 
     public Slider healthSlider;
-    GameObject jugador;
-    // Start is called before the first frame update
+    GameObject player;
+
+    bool isDead = false;
+    float fadeDuration = 1.0f;
+    Renderer renderer;
+
+    public ParticleTengu desactivar;
+
+    public GameObject deathParticlesObject;
+
+
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
+        renderer = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    void OnTriggerEnter(Collider other) 
-    { 
-        if(other.gameObject.tag == "Katana")
-        {     
+        if (other.gameObject.tag == "Katana")
+        {
             TakeDamage();
-            EmpujarHaciaAtras();
+            PushBack();
         }
     }
 
-    void EmpujarHaciaAtras()
+    void PushBack()
     {
-        Vector3 direccionGolpe = transform.position - jugador.transform.position;
-        direccionGolpe.Normalize();
+        Vector3 pushDirection = transform.position - player.transform.position;
+        pushDirection.Normalize();
 
-        float fuerzaEmpuje = 50f;
-        transform.position += direccionGolpe * fuerzaEmpuje * Time.deltaTime;
+        float pushForce = 50f;
+        transform.position += pushDirection * pushForce * Time.deltaTime;
     }
 
     public void TakeDamage()
     {
-        Health -= damageAmount;
-        ActualizeHealth();
-        if(Health <= 0)
+        if (!isDead)
         {
-            Die();
+            health -= damageAmount;
+            UpdateHealthUI();
+            if (health <= 0)
+            {
+                Die();
+            }
         }
     }
 
-    void Die()
+    public void Die()
     {
-        Destroy(this.gameObject);
+        isDead = true;
+        gameObject.SetActive(false);
+        if (deathParticlesObject != null)
+        {
+            deathParticlesObject.SetActive(true); // Activa las partículas de muerte
+            desactivar.StartCoroutine(desactivar.DeactivateAfterDelayCoroutine());
+        }
     }
 
-    void ActualizeHealth()
+    void UpdateHealthUI()
     {
-        healthSlider.value = Health / maxHealth;
+        healthSlider.value = health / maxHealth;
     }
 }
