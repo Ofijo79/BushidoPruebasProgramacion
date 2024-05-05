@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuManagement : MonoBehaviour
 {
+    SoundManager sound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        sound = GameObject.Find("Sonidos").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class MenuManagement : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
+        sound.StopBGM();
     }
 
     public void Exit()
