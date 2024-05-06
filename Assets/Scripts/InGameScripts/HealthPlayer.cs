@@ -16,11 +16,14 @@ public class HealthPlayer : MonoBehaviour
     Isometriccontroller dash;
 
     MenuManagement death;
+
+    SFXManager sfx;
     // Start is called before the first frame update
     void Start()
     {
         dash = GetComponent<Isometriccontroller>();
         death = GameObject.Find("MenuManagement").GetComponent<MenuManagement>();
+        sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
     }
 
     void OnTriggerEnter(Collider other) 
@@ -53,6 +56,7 @@ public class HealthPlayer : MonoBehaviour
         if(health <= 0)
         {
             Die();
+            sfx.DeathSound();
         }
     }
 
@@ -63,6 +67,22 @@ public class HealthPlayer : MonoBehaviour
         {
             renderer.enabled = false;
         }
+
+        StartCoroutine(DeathRoutine());
+    }
+
+    IEnumerator DeathRoutine()
+    {
+        // Espera 2 segundos
+        yield return new WaitForSeconds(4f);
+
+        // Reproduce el sonido de muerte
+        sfx.DeathSound();
+
+        // Espera un corto tiempo adicional si es necesario
+        yield return new WaitForSeconds(0.5f); // Por ejemplo, espera 0.5 segundos más
+
+        // Muestra la pantalla de muerte
         death.DeathScreen();
     }
     

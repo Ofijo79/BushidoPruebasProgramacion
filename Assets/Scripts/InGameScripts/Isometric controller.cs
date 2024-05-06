@@ -54,6 +54,12 @@ public class Isometriccontroller : MonoBehaviour
     //Resistencia
     private ResistencePlayer _resistance;
 
+    //Sonidos
+    WalkSound walk;
+
+    SFXManager sfx;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +73,10 @@ public class Isometriccontroller : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        walk = GameObject.Find("WalkSound").GetComponent<WalkSound>();
+
+        sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
     }
 
     // Update is called once per frame
@@ -75,7 +85,6 @@ public class Isometriccontroller : MonoBehaviour
         _horizontal = Input.GetAxisRaw("Horizontal");
         _vertical = Input.GetAxisRaw("Vertical");
         direction = new Vector3(_horizontal, 0, _vertical);
-
         
         Movement();
 
@@ -117,6 +126,18 @@ public class Isometriccontroller : MonoBehaviour
             StartCoroutine(PerformDash());
             _resistance.dashResistance();
         }
+
+        if (_isGrounded && direction != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
+        {
+            if (!walk.IsPlaying("caminar"))
+            {
+                walk.PlaySound("caminar");
+            }
+        }
+        else
+        {
+            walk.StopSound("caminar");
+        }
     }
 
     /*void Attack()
@@ -141,6 +162,7 @@ public class Isometriccontroller : MonoBehaviour
         {
             _animator.SetInteger("attack", 1);
             _resistance.takeResistance();
+            sfx.SwordSound();
         }
     }
 
@@ -159,6 +181,7 @@ public class Isometriccontroller : MonoBehaviour
             _animator.SetInteger("attack", 2);
             canClick = true;
             _resistance.takeResistance();
+            sfx.SwordSound();
         }
         else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") && buttonQuantity == 2)
         {
@@ -171,6 +194,7 @@ public class Isometriccontroller : MonoBehaviour
             _animator.SetInteger("attack", 3);
             canClick = true;
             _resistance.takeResistance();
+            sfx.SwordSound();
         }
         else if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack3"))
         {
@@ -303,6 +327,7 @@ public class Isometriccontroller : MonoBehaviour
             _playerGravity.y = Mathf.Sqrt(_jumpHeigh * -2 * _gravity);
             //_animator.SetBool("IsJumping", true);
             _resistance.jumpResistance();
+            sfx.JumpSound();
         }        
         _playerGravity.y += _gravity * Time.deltaTime;
         
@@ -327,6 +352,7 @@ public class Isometriccontroller : MonoBehaviour
 
         // Inicia el contador de tiempo del dash
         float elapsedTime = 0f;
+        sfx.Dashing();
 
         while (elapsedTime < dashDuration)
         {

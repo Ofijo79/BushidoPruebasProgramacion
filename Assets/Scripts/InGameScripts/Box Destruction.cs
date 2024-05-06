@@ -12,10 +12,14 @@ public class BoxDestruction : MonoBehaviour
     [SerializeField] private float pieceFadeSpeed = 0.25f;
     [SerializeField] private float pieceDestroyDelay = 5f;
     [SerializeField] private float pieceSleepCheckDelay = 0.5f;
+    
+    SFXManager sfx;
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody>();
+
+        sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +27,7 @@ public class BoxDestruction : MonoBehaviour
         if (other.CompareTag("Katana")) // Assuming the tag of the katana is "Katana"
         {
             StartCoroutine(ExplodeCoroutine());
+            sfx.DestructionSound();
         }
     }
 
