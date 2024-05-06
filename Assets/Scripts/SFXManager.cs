@@ -10,7 +10,7 @@ public class SFXManager : MonoBehaviour
 
     private AudioSource source;
 
-    public AudioClip campFire;
+    //public AudioClip campFire;
 
     public AudioClip Destruction;
 
@@ -41,10 +41,10 @@ public class SFXManager : MonoBehaviour
     {
         source.PlayOneShot(Fire);
     }
-    public void CampFire()
+    /*public void CampFire()
     {
         source.PlayOneShot(campFire);
-    }
+    }*/
     public void DestructionSound()
     {
         source.PlayOneShot(Destruction);
