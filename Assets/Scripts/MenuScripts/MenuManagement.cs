@@ -20,8 +20,13 @@ public class MenuManagement : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(4);
         sound.StopBGM();
+    }
+
+    public void Nivel2()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void Exit()

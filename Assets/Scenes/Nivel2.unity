@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.49195296, g: 0.8154298, b: 0.8957621, a: 1}
+  m_IndirectSpecularColor: {r: 0.49522406, g: 0.81560194, b: 0.88759816, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7467,7 +7467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8400006
+      value: 0.5400014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9136,7 +9136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8400006
+      value: 0.5400014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29514,7 +29514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8400006
+      value: 0.5400014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32830,7 +32830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8400006
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a291a151059903e4cbeba42863f5443d, type: 3}
       propertyPath: m_LocalPosition.z
