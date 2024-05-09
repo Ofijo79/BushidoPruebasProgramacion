@@ -89,8 +89,8 @@ public class EnemyBoss : MonoBehaviour
 
     void Patrol()
     {
-        _animator.SetBool("TenguStop", false);
-        _animator.SetBool("TenguPatrolling", true);
+        _animator.SetBool("Stop", false);
+        _animator.SetBool("Run", true);
         if(enemyAgent.remainingDistance < 0.5f)
         {
             //SetRandomPoint();
@@ -105,6 +105,7 @@ public class EnemyBoss : MonoBehaviour
 
     void Chase()
     {
+        _animator.SetBool("Stop", false);
         _animator.SetBool("Run", true);
         _animator.SetInteger("attack", 0);
         enemyAgent.destination = playerTransform.position;
@@ -122,8 +123,8 @@ public class EnemyBoss : MonoBehaviour
 
     void Search()
     {
-        _animator.SetBool("TenguStop", false);
-        _animator.SetBool("TenguPatrolling", true);
+        _animator.SetBool("Stop", false);
+        _animator.SetBool("Run", true);
         if(OnRange() == true)
         {
             searchTimer = 0;
@@ -159,8 +160,8 @@ public class EnemyBoss : MonoBehaviour
 
     IEnumerator Esperar()
     {
-        _animator.SetBool("TenguPatrolling", false);
-        _animator.SetBool("TenguStop", true);
+        _animator.SetBool("Stop", true);
+        _animator.SetBool("Run", false);
         repeat = false;
         yield return new WaitForSeconds (5);
         GotoNextPoint();
