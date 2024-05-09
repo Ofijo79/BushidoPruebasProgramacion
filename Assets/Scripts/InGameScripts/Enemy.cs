@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     float fadeDuration = 1.0f;
     Renderer renderer;
 
-    public ParticleTengu desactivar;
+    public ParticleOni desactivar;
 
     public GameObject deathParticlesObject;
 

@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ActivationBoss : MonoBehaviour
 {
-    BossEnemy enemyScriptObject;
+    EnemyBoss enemyScriptObject;
     public GameObject vidaBoss;
     // Start is called before the first frame update
     void Start()
     {
-        enemyScriptObject = GameObject.Find("Oni").GetComponent<BossEnemy>();
+        enemyScriptObject = GameObject.Find("Oni").GetComponent<EnemyBoss>();
     }
 
     // Update is called once per frame
