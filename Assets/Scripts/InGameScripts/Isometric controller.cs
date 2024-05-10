@@ -64,7 +64,7 @@ public class Isometriccontroller : MonoBehaviour
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        _animator = GetComponentInChildren<Animator>();
+        _animator = GetComponent<Animator>();
         _lookAtTransform = GameObject.Find("LookAt").transform;
         _resistance = GetComponent<ResistencePlayer>();
         _camera = Camera.main.transform;

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 642043}
   - component: {fileID: 642042}
   - component: {fileID: 642041}
+  - component: {fileID: 642044}
   m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
@@ -280,6 +281,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642039}
   m_CullTransparentMesh: 1
+--- !u!114 &642044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &15378148
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +668,7 @@ GameObject:
   - component: {fileID: 228244245}
   - component: {fileID: 228244244}
   - component: {fileID: 228244243}
+  - component: {fileID: 228244246}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -755,6 +802,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228244241}
   m_CullTransparentMesh: 1
+--- !u!114 &228244246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228244241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &270392623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,6 +1597,7 @@ GameObject:
   - component: {fileID: 583345050}
   - component: {fileID: 583345049}
   - component: {fileID: 583345048}
+  - component: {fileID: 583345051}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1650,6 +1743,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583345046}
   m_CullTransparentMesh: 1
+--- !u!114 &583345051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583345046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &674438815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +2000,7 @@ GameObject:
   - component: {fileID: 764796461}
   - component: {fileID: 764796460}
   - component: {fileID: 764796459}
+  - component: {fileID: 764796462}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -1971,6 +2110,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764796457}
   m_CullTransparentMesh: 1
+--- !u!114 &764796462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764796457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &816260749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8856326109344997530, guid: fb04c38a7b846104c8d06584ae7c3f31, type: 3}
+  m_PrefabInstance: {fileID: 202812976}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b891813e26022418dbd1582d40ae0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &818224256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,6 +2578,7 @@ GameObject:
   - component: {fileID: 958916747}
   - component: {fileID: 958916746}
   - component: {fileID: 958916745}
+  - component: {fileID: 958916748}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2504,6 +2700,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958916743}
   m_CullTransparentMesh: 1
+--- !u!114 &958916748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958916743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &968238789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,6 +3395,7 @@ GameObject:
   - component: {fileID: 1486510761}
   - component: {fileID: 1486510760}
   - component: {fileID: 1486510759}
+  - component: {fileID: 1486510762}
   m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
@@ -3299,6 +3541,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486510757}
   m_CullTransparentMesh: 1
+--- !u!114 &1486510762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486510757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1585649553
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3598,7 @@ GameObject:
   - component: {fileID: 1585649557}
   - component: {fileID: 1585649556}
   - component: {fileID: 1585649555}
+  - component: {fileID: 1585649558}
   m_Layer: 5
   m_Name: Sound
   m_TagString: Untagged
@@ -3444,6 +3732,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585649553}
   m_CullTransparentMesh: 1
+--- !u!114 &1585649558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585649553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: SwordSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 816260749}
+          m_TargetAssemblyTypeName: SFXManager, Assembly-CSharp
+          m_MethodName: GetHit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1644135745
 GameObject:
   m_ObjectHideFlags: 0

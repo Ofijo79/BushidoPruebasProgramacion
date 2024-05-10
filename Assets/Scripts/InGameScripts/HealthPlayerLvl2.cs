@@ -18,12 +18,15 @@ public class HealthPlayerLvl2 : MonoBehaviour
     MenuManagement death;
 
     SFXManager sfx;
+
+    Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
         dash = GetComponent<Isometriccontroller>();
         death = GameObject.Find("MenuManagement").GetComponent<MenuManagement>();
         sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
+        _animator = GetComponent<Animator>();
     }
 
     void OnTriggerEnter(Collider other) 
@@ -63,6 +66,8 @@ public class HealthPlayerLvl2 : MonoBehaviour
 
     void Die()
     {
+        dash.enabled = false;
+        _animator.SetBool("IsDead", true);
         Renderer renderer = GetComponent<Renderer>();
         if (renderer != null)
         {
