@@ -20,11 +20,14 @@ public class Archer : MonoBehaviour
 
     public GameObject deathParticlesObject;
 
+    SFXManager sfx;
+
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         renderer = GetComponent<Renderer>();
+        sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -33,6 +36,7 @@ public class Archer : MonoBehaviour
         {
             TakeDamage();
             PushBack();
+            sfx.SwordHit();
         }
     }
 

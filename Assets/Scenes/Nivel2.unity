@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4928847, g: 0.8156978, b: 0.8914548, a: 1}
+  m_IndirectSpecularColor: {r: 0.49160773, g: 0.8143331, b: 0.8912741, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -32723,21 +32723,6 @@ MonoBehaviour:
   tiemeOfInactivity: 2
   baseVelocityRegeneration: 1
   enhancedVelocityRegeneration: 35
---- !u!114 &1424428570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2983971851308817905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54c259a73d30b56429882cfb46c46c6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
-  healthSlider: {fileID: 704679100}
 --- !u!1 &1427818701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a291a151059903e4cbeba42863f5443d, type: 3}
@@ -49761,7 +49746,7 @@ GameObject:
   - component: {fileID: 8752674545597832448}
   - component: {fileID: 321820942782114742}
   - component: {fileID: 1424428569}
-  - component: {fileID: 1424428570}
+  - component: {fileID: 8752674545597832449}
   m_Layer: 0
   m_Name: KenjiroIdle
   m_TagString: Player
@@ -55593,6 +55578,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 3.02, z: -0.56}
+--- !u!114 &8752674545597832449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2983971851308817905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e2f909d52dba5498bc42f5bca966fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 100
+  healthSlider: {fileID: 704679100}
 --- !u!1 &8767341994656229686
 GameObject:
   m_ObjectHideFlags: 0

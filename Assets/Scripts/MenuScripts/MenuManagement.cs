@@ -39,8 +39,13 @@ public class MenuManagement : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    public void DeathScreen()
+    public void DeathScreenLvl1()
     {
         SceneManager.LoadScene(3);
+    }
+
+    public void DeathScreenLvl2()
+    {
+        SceneManager.LoadScene(5);
     }
 }

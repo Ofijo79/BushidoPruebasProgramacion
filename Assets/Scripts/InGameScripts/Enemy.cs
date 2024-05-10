@@ -20,11 +20,15 @@ public class Enemy : MonoBehaviour
 
     public GameObject deathParticlesObject;
 
+    SFXManager sfx;
+
+
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         renderer = GetComponent<Renderer>();
+        sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -33,6 +37,7 @@ public class Enemy : MonoBehaviour
         {
             TakeDamage();
             PushBack();
+            sfx.SwordHit();
         }
     }
 

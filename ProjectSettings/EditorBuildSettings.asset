@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: cf21a893901b0fa418fec4647de26024
+  - enabled: 1
+    path: Assets/Scenes/Pantalla de muerte 2.unity
+    guid: 8610d4e5b59b6264eb555effc45e5a54
   m_configObjects: {}

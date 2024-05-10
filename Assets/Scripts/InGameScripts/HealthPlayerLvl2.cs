@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class HealthPlayer : MonoBehaviour
+public class HealthPlayerLvl2 : MonoBehaviour
 {
     public int maxHealth = 100;
     [SerializeField]float health = 100;
@@ -84,7 +84,7 @@ public class HealthPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Por ejemplo, espera 0.5 segundos más
 
         // Muestra la pantalla de muerte
-        death.DeathScreenLvl1();
+        death.DeathScreenLvl2();
     }
     
     void ActualHealth()
