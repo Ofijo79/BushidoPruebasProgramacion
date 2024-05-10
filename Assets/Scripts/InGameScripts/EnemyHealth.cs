@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 50;
     [SerializeField] float health = 50;
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     float fadeDuration = 1.0f;
     Renderer renderer;
 
-    public ParticleTengu desactivar;
+    public ParticleOni desactivar;
 
     public GameObject deathParticlesObject;
 
