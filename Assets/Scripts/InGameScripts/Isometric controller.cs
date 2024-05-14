@@ -44,6 +44,7 @@ public class Isometriccontroller : MonoBehaviour
     public LayerMask enemyLayer;
     int buttonQuantity;
     bool canClick;
+    public bool isBlocking = false;
 
     //Dash
     public float dashDistance = 5f;
@@ -218,6 +219,7 @@ public class Isometriccontroller : MonoBehaviour
     
     void Block()
     {
+        isBlocking = true;
         _animator.SetBool("IsBlocking", true);
         _animator.SetBool("WalkingBlock", false);
 
@@ -226,6 +228,7 @@ public class Isometriccontroller : MonoBehaviour
 
     void WalkingBlock()
     {
+        isBlocking = true;
         _animator.SetBool("WalkingBlock", true);
         _animator.SetBool("IsBlocking", false);
 
@@ -234,6 +237,7 @@ public class Isometriccontroller : MonoBehaviour
 
     void DontBlock()
     {
+        isBlocking = false;
         _animator.SetBool("IsBlocking", false);
         _animator.SetBool("WalkingBlock", false);
         _playerSpeed = 7;

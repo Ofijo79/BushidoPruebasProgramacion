@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.49186617, g: 0.8161098, b: 0.8967334, a: 1}
+  m_IndirectSpecularColor: {r: 0.49256903, g: 0.8154384, b: 0.89146054, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8399,7 +8399,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!114 &494223062
 MonoBehaviour:
@@ -12649,7 +12649,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!114 &820478208
 MonoBehaviour:
@@ -25436,7 +25436,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!114 &908860094
 MonoBehaviour:
@@ -28607,7 +28607,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!114 &1148548940
 MonoBehaviour:
@@ -41843,7 +41843,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!114 &1858283107
 MonoBehaviour:
@@ -46420,6 +46420,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  isBlocking: 0
   dashDistance: 5
   dashDuration: 0.5
   dashCooldown: 2

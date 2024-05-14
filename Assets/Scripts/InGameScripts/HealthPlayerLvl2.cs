@@ -10,6 +10,8 @@ public class HealthPlayerLvl2 : MonoBehaviour
     [SerializeField]float health = 100;
     float damageAmount = 10;
     float damageAmountBullet = 20;
+    //float damageAmountBlocking = 5;
+    //float damageAmountBulletBlocking = 10;
 
     public Slider healthSlider;
 
@@ -31,17 +33,46 @@ public class HealthPlayerLvl2 : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     { 
-        if(other.gameObject.tag == "Arma" && dash.isDashing == false)
+        if(other.gameObject.tag == "Arma" && dash.isDashing == false && dash.isBlocking == false)
         {     
             GetDamage();
         }
         
-        if(other.gameObject.tag == "Bullet" && dash.isDashing == false)
+        if(other.gameObject.tag == "Bullet" && dash.isDashing == false && dash.isBlocking == false)
         {     
             GetDamageBullet();
         }
+        if(other.gameObject.tag == "Arma" && dash.isBlocking == true)
+        {     
+            GetDamageBlocking();
+        }
+        
+        if(other.gameObject.tag == "Bullet" && dash.isBlocking == true)
+        {     
+            GetDamageBulletBlocking();
+        }
     }
 
+    public void GetDamageBulletBlocking()
+    {
+        health -= damageAmountBullet / 2;
+        ActualHealth();
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void GetDamageBlocking()
+    {
+        health -= damageAmount / 2;
+        sfx.GetHit();
+        ActualHealth();
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
     public void GetDamageBullet()
     {
         health -= damageAmountBullet;
