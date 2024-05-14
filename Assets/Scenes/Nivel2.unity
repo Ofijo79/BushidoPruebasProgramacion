@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.49175555, g: 0.8143493, b: 0.8909699, a: 1}
+  m_IndirectSpecularColor: {r: 0.49177462, g: 0.81602776, b: 0.8965765, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -47378,8 +47378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1dc215277aa5141ba57b953e870a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
+  maxHealth: 200
+  health: 200
   healthSlider: {fileID: 1684578493}
   desactivar: {fileID: 947750317}
   deathParticlesObject: {fileID: 947750316}
