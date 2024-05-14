@@ -7,6 +7,7 @@ public class ActivationBoss : MonoBehaviour
 {
     EnemyBoss enemyScriptObject;
     public GameObject vidaBoss;
+    public BoxCollider bloqueo;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class ActivationBoss : MonoBehaviour
         {
             enemyScriptObject.enabled = true;
             vidaBoss.SetActive(true);
+            bloqueo.enabled = true;
         }
     }
 }
