@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.49183518, g: 0.81508553, b: 0.8907653, a: 1}
+  m_IndirectSpecularColor: {r: 0.49154717, g: 0.8147594, b: 0.8918601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4387,7 +4387,7 @@ Transform:
   m_GameObject: {fileID: 221833187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -106.09, y: 0, z: -49.92}
+  m_LocalPosition: {x: -107.44, y: 0, z: -49.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4427,7 +4427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaBoss: {fileID: 1598144871}
-  bloqueo: {fileID: 1637433555}
 --- !u!1 &227361351
 GameObject:
   m_ObjectHideFlags: 0
@@ -9741,7 +9740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345074108674315355, guid: ebe137252186fac4cae51b8197cbcd54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -109.97
+      value: -109.98
       objectReference: {fileID: 0}
     - target: {fileID: 4345074108674315355, guid: ebe137252186fac4cae51b8197cbcd54, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39386,12 +39385,12 @@ GameObject:
   - component: {fileID: 1637433554}
   - component: {fileID: 1637433555}
   m_Layer: 0
-  m_Name: Bloqueo en el boss
+  m_Name: Bloqueo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1637433554
 Transform:
   m_ObjectHideFlags: 0
@@ -39424,7 +39423,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 8.913589, z: 7.82621}
   m_Center: {x: 0, y: 0.22230673, z: 0.41099548}
@@ -51380,7 +51379,7 @@ Transform:
   m_GameObject: {fileID: 8519688251813431576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.923777, y: -0.14976168, z: -8.873}
+  m_LocalPosition: {x: -11.17, y: -0.14976168, z: -8.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

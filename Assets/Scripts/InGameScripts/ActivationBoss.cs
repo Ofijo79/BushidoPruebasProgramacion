@@ -7,11 +7,12 @@ public class ActivationBoss : MonoBehaviour
 {
     EnemyBoss enemyScriptObject;
     public GameObject vidaBoss;
-    public BoxCollider bloqueo;
+    BoxCollider bloqueo;
     // Start is called before the first frame update
     void Start()
     {
         enemyScriptObject = GameObject.Find("Oni").GetComponent<EnemyBoss>();
+        bloqueo = GameObject.Find("Bloqueo").GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
