@@ -66513,14 +66513,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &199165687823207682
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115376324763397546}
-  m_Mesh: {fileID: 5709657159434205058, guid: 9f5c7eea9ad88964daf7351561ab4d56, type: 3}
 --- !u!1 &250075593456392590
 GameObject:
   m_ObjectHideFlags: 0
@@ -72211,21 +72203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSound: {fileID: 8300000, guid: 9072ba60dc5a2464bbe8f2021527e8a6, type: 3}
---- !u!4 &1621214812824475476
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115376324763397546}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.19225504, y: -0.24603036, z: -0.65369225, w: 0.6893428}
-  m_LocalPosition: {x: -138.8923, y: 1.9506438, z: -368.4992}
-  m_LocalScale: {x: 1.15953, y: 1.0001945, z: 1.15953}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1689134320567665022}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1644426905868295591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72389,7 +72366,6 @@ Transform:
   - {fileID: 2599814253521493174}
   - {fileID: 2157288321561382094}
   - {fileID: 7067216109523191452}
-  - {fileID: 1621214812824475476}
   - {fileID: 5224803391323617005}
   - {fileID: 6318103063754850056}
   - {fileID: 6454191686949278417}
@@ -82886,48 +82862,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &4590441994929603779
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115376324763397546}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: cce2b783b6efbc847885a8f05285b08a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &4648771806502767229
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83995,47 +83929,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &5115376324763397546
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1621214812824475476}
-  - component: {fileID: 199165687823207682}
-  - component: {fileID: 4590441994929603779}
-  - component: {fileID: 5115376324763397547}
-  m_Layer: 0
-  m_Name: Puerta.002
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &5115376324763397547
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115376324763397546}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5709657159434205058, guid: 9f5c7eea9ad88964daf7351561ab4d56, type: 3}
 --- !u!1 &5123433389969099021
 GameObject:
   m_ObjectHideFlags: 0
