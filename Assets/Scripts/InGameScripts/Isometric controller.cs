@@ -89,7 +89,7 @@ public class Isometriccontroller : MonoBehaviour
         
         Movement();
 
-        if(Input.GetKey(KeyCode.LeftShift) && _resistance.actualResistance > 1 && direction != Vector3.zero)
+        if(Input.GetKey(KeyCode.LeftShift) && _resistance.actualResistance > 1)
         {
             Sprint();
         }
