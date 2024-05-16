@@ -22,13 +22,17 @@ public class EnemyHealth : MonoBehaviour
 
     SFXManager sfx;
 
+    SoundManager music;
 
+    BossBattle boss;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         renderer = GetComponent<Renderer>();
         sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
+        music = GameObject.Find("Music").GetComponent<SoundManager>();
+        boss = GameObject.Find("BattleBoss").GetComponent<BossBattle>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -46,7 +50,7 @@ public class EnemyHealth : MonoBehaviour
         Vector3 pushDirection = transform.position - player.transform.position;
         pushDirection.Normalize();
 
-        float pushForce = 50f;
+        float pushForce = 20f;
         transform.position += pushDirection * pushForce * Time.deltaTime;
     }
 
@@ -66,6 +70,8 @@ public class EnemyHealth : MonoBehaviour
     public void Die()
     {
         isDead = true;
+        music.ResumeBGM();
+        boss.StopBattle();
         gameObject.SetActive(false);
         if (deathParticlesObject != null)
         {

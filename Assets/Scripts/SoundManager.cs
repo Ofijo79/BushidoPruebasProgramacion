@@ -23,4 +23,9 @@ public class SoundManager : MonoBehaviour
     {
         source.Stop();
     }
+
+    public void ResumeBGM()
+    {
+        source.Play();
+    }
 }

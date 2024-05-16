@@ -1240,6 +1240,10 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8856326109344997530, guid: fb04c38a7b846104c8d06584ae7c3f31, type: 3}
+      propertyPath: swordMove
+      value: 
+      objectReference: {fileID: 8300000, guid: 773329a19bb4c7547a791f550742a8c7, type: 3}
     m_RemovedComponents:
     - {fileID: 2125980543509494867, guid: fb04c38a7b846104c8d06584ae7c3f31, type: 3}
     m_RemovedGameObjects: []
