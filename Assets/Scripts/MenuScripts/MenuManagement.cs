@@ -48,4 +48,9 @@ public class MenuManagement : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+
+    public void ThanksForPlaying()
+    {
+        SceneManager.LoadScene(6);
+    }
 }
