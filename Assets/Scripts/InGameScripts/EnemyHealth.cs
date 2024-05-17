@@ -25,6 +25,8 @@ public class EnemyHealth : MonoBehaviour
     SoundManager music;
 
     BossBattle boss;
+    
+    MenuManagement menu;
 
     void Start()
     {
@@ -33,6 +35,7 @@ public class EnemyHealth : MonoBehaviour
         sfx = GameObject.Find("SFX").GetComponent<SFXManager>();
         music = GameObject.Find("Music").GetComponent<SoundManager>();
         boss = GameObject.Find("BattleBoss").GetComponent<BossBattle>();
+        menu = GameObject.Find("MenuManagement").GetComponent<MenuManagement>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -70,8 +73,8 @@ public class EnemyHealth : MonoBehaviour
     public void Die()
     {
         isDead = true;
-        music.ResumeBGM();
         boss.StopBattle();
+        menu.ThanksForPlaying();
         gameObject.SetActive(false);
         if (deathParticlesObject != null)
         {
